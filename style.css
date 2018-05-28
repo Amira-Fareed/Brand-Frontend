@@ -1,0 +1,439 @@
+body{
+    box-sizing: border-box;
+    background-color: #f8fbff;
+	font-family: calibri;
+	font-weight: normal;
+	min-width: 350px;
+}
+
+a {text-decoration: none !important;}
+
+ul {list-style: none;}
+
+.center
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/************	Navigation background-repeat: ************/
+
+.naviBar .nBar
+{
+	width: 100%;
+	background-color: white;
+	display: inline-block;
+}
+.naviBar .nBar .navBrand
+{
+
+	padding-left: 15px;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 60px;
+	color: #4a4a4a;
+}
+
+
+.naviBar .nBar .btn
+{
+	float: right;
+	padding: 10px;
+	background-color: white;
+
+}
+
+.naviBar .nBar .strip
+{
+	width: 35px;
+    height: 5px;
+    background-color: #979797;
+    margin: 6px 0;
+}
+
+/*****************	Home	****************/
+
+.home .homeTxt 
+{
+    width: 100%;
+    height: 100px;
+    background-color: #ff9933;
+    font-size: 3.0vw;
+	line-height: 100px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	overflow: hidden;
+}
+.home .homeTxt a
+{
+
+	color: #4a4a4a;
+}
+.home .homeTxt a:hover
+{
+	background-color:#fff ;
+    border-radius: 5px;
+    color: #ff9933;
+    text-align: center;
+    padding: 0 7px 0 7px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+
+/********************	Products	*******************/
+
+.products
+{
+	background: #f8fbff;
+	margin-top: 10px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+
+/* --- Product Card ---- */
+
+#product-container{
+position: relative;
+margin:0 auto;
+width: 100%;
+}
+
+#make-3D-space{
+    position: relative;
+    width:75%;
+    margin: 0 auto;
+}
+.product .btn-group-lg>.btn, .btn-lg {
+    background-color: #4a4a4a;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 172px;
+}
+
+.product .btn-group-lg>.btn:hover, .btn-lg:hover {
+
+    background-color: #fff;
+    color: #ff9933;
+    border: 2px solid #ff9933;
+
+}
+.product-front{
+	width:100%;
+	height:500px;
+	background:#fff;
+}
+
+.product-card{
+	box-shadow:0px 13px 21px 5px rgba(0, 0, 0, 0.3);
+	border-radius: 7px;
+	width:100%;
+	height:500px;
+	position:relative;    
+	margin-top:10px;	
+	overflow:hidden;
+}
+
+@media only screen and (max-width: 780px) {
+    body .product-card {  height: 380px;}
+    body .stats-container {
+	font-size:3.0vw;
+	top:70%;}
+
+	body .product-card .stats-container .product-options ul li 
+	,.product-options strong ,body .product-options .product_price,
+	body .stats-container .product_name
+	{	font-size:16px;}
+
+	body .stats-container p,
+	body .product-options .product_price_before
+	{font-size: 12px;}
+	body .product-options .type img{margin-left: -8px;}
+	body .product-options .type ul,body .product-options .units ul {margin-left: -10px;}
+
+
+
+}
+
+.product-card.animate{
+	box-shadow:0px 13px 21px -5px rgba(0, 0, 0, 0.3);
+}
+
+.stats-container{
+	background:#fff;	
+	position:absolute;
+	top:77%;
+	width:100%;
+	height:300px;
+	padding:27px 35px 35px;	
+	-webkit-transition: all 200ms ease-out; 
+       -moz-transition: all 200ms ease-out; 
+         -o-transition: all 200ms ease-out; 
+            transition: all 200ms ease-out;
+}
+.product-card.animate .stats-container{
+	top:50%;
+}
+.stats-container .product_header
+{
+	height: 100px;
+}
+.stats-container .product_name{
+	font-size:25px;
+	color:#393c45;	
+}
+.stats-container p{
+	font-size:15px;
+	color:#b1b1b3;	
+	padding:0.3vw 0 0.2vw 0;
+}
+
+.image_overlay{
+	position:absolute;
+	top:0;
+	left:0; 
+	width:100%;
+	height:100%;
+	background:#525252;
+	opacity:0;	
+}
+.product-card.animate .image_overlay{
+	opacity:0.7;	
+}
+.product-options{
+	padding:2px 0 0;
+	overflow: hidden;
+}
+
+
+.product-options .product_price{
+	color:#ff6633;
+	font-size:2.5vw;
+	font-weight:600;
+}
+.product-options .product_price_before{	
+	text-decoration: line-through;
+	color:#969699;
+	font-size:1.7vw;
+	}
+.product-options .type ul li ,.units ul li{
+	display: inline-block;
+	color:#494949;
+	font-size:2.5vw;
+}
+
+.product-options .type ul li:nth-child(1) ,.units ul li:nth-child(1)
+{
+	width: 30%;
+	float: left;
+}
+
+.product-options .type ul li:nth-child(2) ,.units ul li:nth-child(2)
+{
+	width: 70%;
+	float: right;
+}
+
+.view_details{	
+	background-color: #ff9933;
+    border-radius: 5px;
+	position:absolute;
+	top:112px;
+	left:50%;
+	margin-left:-85px;	
+	border:2px solid #fff;
+	color:#fff;
+	font-size:19px;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:700;
+	padding:10px 0;
+	width:172px;	
+	opacity:0;
+
+}
+.view_details:hover{	
+	background:#fff;
+	color:#ff9933;
+	cursor:pointer;
+
+}
+.product-card.animate .view_details{
+	opacity:1;
+	width:152px;
+	font-size:15px;
+	margin-left:-75px;
+	top:115px;	
+}
+
+.products .pages-nav
+{
+	padding-top: 30px;
+	width: 50%;
+	margin: 0 auto;
+}
+.products .pages-nav .btn  
+{
+	color: #ff9933 ;
+	background-color: #fff;
+
+	border: 1px solid #b4b8bb;
+
+}
+.products .pages-nav .btn:hover
+{
+	color: white ;
+	background-color: #ff9933;
+
+}
+
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+
+    width: 2%;
+}
+
+
+/*pop up Filter*/
+
+/* The Modal (background) */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    min-width: 300px;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal ul strong
+{
+	padding-bottom: 3px;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.modal ul li
+{
+	color: #4a4a4a;
+}
+.modal ul li:hover
+{
+	color: #ff9933;
+}
+.modal hr 
+{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: auto;
+}
+.modal .mybuttons {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.modal .apply .btn {
+    background-color: #ff9933;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.modal .closebtn .btn {
+    background-color: #7a7a7a;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+}
+
+ .modal .apply .btn:hover ,.modal .closebtn .btn:hover {
+
+    background-color: #4a4a4a;
+    color: #ff9933;
+
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/****************** 	About 	******************/
+
+.About
+{
+	color: #4a4a4a;
+	background-color: white;
+}
+.About h1
+{
+	margin-left: 15px;
+	font-weight: bold;
+	font-size: 40px;
+	margin-bottom: 35px;
+}
+.About ul li 
+{
+	line-height: 1.8;
+}
+
+.About ul li strong
+{
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.About ul li a
+{
+	color: #4a4a4a;
+}
+.About ul li a:hover
+{
+	color: #ff9933;
+}
+
+
+
